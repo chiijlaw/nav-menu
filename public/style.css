@@ -76,10 +76,11 @@ body {
   position: absolute;
   background-color: #ffffff;
   transition: all 0.5s ease;
-  transform: translateY(-1em);
   top: 60px;
   width: 150px;
   padding: 5px 20px;
+  height: 50%;
+  overflow: hidden;
 }
 
 .dropdown-content > a {
@@ -94,8 +95,8 @@ body {
 .dropdown:hover .dropdown-content {
   z-index: 2;
   opacity: 1;
-  transform: translateY(0%);
   top: 60px;
   width: 150px;
   padding: 5px 20px;
+  height: 150%;
 }
