@@ -1,0 +1,79 @@
+body {
+  font-family: Lato, sans-serif;
+  background-color: lightsteelblue;
+}
+
+#top-bar {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+}
+
+#top-bar a {
+  text-decoration: none;
+}
+
+#logo {
+  background-color: #23ac9b;
+  color: #ffffff;
+  padding: 0 20px;
+  margin: 10px;
+  border-radius: 4px;
+}
+
+#coupon {
+  background-color: #f06324;
+  color: #ffffff;
+  padding: 0 20px;
+  margin: 10px;
+  border-radius: 4px;
+}
+
+.basic-box {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  color: gray;
+}
+
+.down-arrow {
+  padding: 4px;
+  color: inherit;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.basic-box > a {
+  color: inherit;
+}
+
+.basic-box:hover {
+  color: #f06324;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+}
+
+.dropdown-content > a {
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  top: 60px;
+  width: 150px;
+  padding: 5px 20px;
+}
