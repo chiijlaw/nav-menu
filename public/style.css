@@ -103,7 +103,7 @@ body {
   transition: opacity 0.4s ease-out, height 0.4s ease-out;
   top: 60px;
   width: 150px;
-  padding: 5px 20px;
+  padding: 5px 40px;
   height: 20%;
   overflow: hidden;
   justify-content: space-around;
@@ -161,4 +161,6 @@ body {
   top: 0;
   left: 80px;
   height: fit-content;
+  padding: 5px 0px;
+  transition: all 0.5s ease;
 }
