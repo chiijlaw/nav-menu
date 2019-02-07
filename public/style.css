@@ -22,6 +22,11 @@ body {
   border-radius: 4px;
 }
 
+#right {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 #coupon {
   background-color: #f06324;
   color: #ffffff;
@@ -34,6 +39,24 @@ body {
   background-color: #f57439;
 }
 
+#hamburger {
+  display: none;
+  align-self: center;
+  padding: 8px;
+  color: slategray;
+  border: none;
+  font-size: 16px;
+  outline: none;
+}
+
+#hamburger:hover {
+  color: #f06324;
+}
+
+#hamburger:focus {
+  color: #f06324;
+}
+
 #home {
   height: 10rem;
   text-align: center;
@@ -44,7 +67,7 @@ body {
   display: flex;
   align-items: center;
   padding: 0 10px;
-  color: gray;
+  color: slategray;
 }
 
 .down-arrow {
@@ -71,21 +94,23 @@ body {
 }
 
 .dropdown-content {
+  display: flex;
+  flex-direction: column;
   z-index: -1;
   opacity: 0;
   position: absolute;
   background-color: #ffffff;
-  transition: all 0.5s ease;
+  transition: opacity 0.4s ease-out, height 0.4s ease-out;
   top: 60px;
   width: 150px;
   padding: 5px 20px;
-  height: 50%;
+  height: 20%;
   overflow: hidden;
+  justify-content: space-around;
 }
 
 .dropdown-content > a {
-  color: gray;
-  padding: 15px;
+  color: slategray;
 }
 
 .dropdown-content > a:hover {
@@ -97,6 +122,43 @@ body {
   opacity: 1;
   top: 60px;
   width: 150px;
-  padding: 5px 20px;
-  height: 150%;
+  height: 250%;
+}
+
+@media (max-width: 800px) {
+  #hamburger {
+    display: block;
+  }
+  .menu {
+    display: none;
+  }
+}
+
+@media (min-width: 800px) {
+  #hamburger {
+    display: none;
+  }
+  .menu {
+    display: flex;
+  }
+}
+
+#hamburger:focus ~ .menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  background-color: white;
+  justify-content: space-between;
+  top: 60px;
+  padding: 3px;
+  margin: 8px;
+  width: -webkit-fill-available;
+  height: 200px;
+}
+
+#hamburger:focus ~ .menu .dropdown-content {
+  top: 0;
+  left: 80px;
+  height: fit-content;
 }
