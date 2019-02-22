@@ -1,9 +1,6 @@
 # nav-menu
 Nav menu created in vanilla JavaScript and ES5
 
-## Visit Demo
-go to http://ec2-54-183-82-210.us-west-1.compute.amazonaws.com:8080/
-
 ### Prerequisites
 
 > This assumes you are using [npm](https://www.npmjs.com/) as your package manager.
